@@ -1,0 +1,21 @@
+// Font variables
+
+$font-stack-serif: petersburg-web, serif;
+$font-stack-text: mandrel-normal, serif;
+$font-stack-sans-serif: mr-eaves-modern, sans-serif;
+
+// Colors
+
+$color-text: #333;
+$color-frame: #FFF;
+$color-navigation: #FFF;
+$color-background: #EEE;
+
+@function edge-curve($direction) {
+	@return linear-gradient(to $direction, rgba(0,0,0,0.20) 0%, rgba(0,0,0,0.05) 50%, rgba(0,0,0,0) 100%);
+}
+
+// Responsive
+$tablet-width: 36em;
+$desktop-width: 48em;
+$large-desktop-width: 64em;

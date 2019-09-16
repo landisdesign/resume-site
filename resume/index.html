@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<!--
+	Custom Layout Brochureware Example
+	
+	This page illustrates a typical brochureware hand-coded layout. This might be used on
+	a small site, and still takes advantage of SCSS, but isn't scalable in the same way
+	that an OOCSS- or BEM-based system is. It does have the advantages of being precisely
+	what is required to present the site, no more, no less. This makes the site leaner and
+	more efficient than a framework such as Bootstrap or an OOCSS design. Code can also be
+	more easily written to reflect the business and design domains than off-the-shelf
+	frameworks, reflecting conversations between developers and other team members in the
+	code itself.
+	
+	And it's fun. :)
+-->
+	<head>
+		<title>Michael Landis, Web Developer and Technical Translator</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Given the size of the IE (not Edge) market I am forgoing the ICO version. -->
+		<link rel="icon" href="../favicon.png">
+		<link rel="stylesheet" href="//use.typekit.net/gsn5mzx.css" integrity="sha384-3KoIwGCi3wEjKL/6jfwJ91KrSyMG4TBBjHmrHRcrLVHNdxXHsIRGwsVuaQM13+It" crossorigin="anonymous">
+		<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<!--
+			The stylesheet for this page is compiled via SASS from source starting at
+			/development/scss/resume/resume.scss. Each page has some differences that
+			reflect differences in layout frameworks.
+		-->
+		<link rel="stylesheet" href="resume.css">
+	</head>
+	<body>
+		<header>
+			<div class="logo">
+				<h1>Michael Landis</h1>
+				<p>Web Developer
+				<p>Technical Translator
+			</div>
+			<div class="contact-information">
+				<!--
+					I try to make my data- attributes as self-documenting as possible. I'm
+					including a "toggle" class for styling, not functionality. -->
+				<div class="link-icon toggle"><a href="#navigation" class="fas fa-bars collapsed" data-toggle-destination-id="navigation" data-toggle-bounds-id="nav-anchor"></a></div>
+				<p><a href="mailto:michael4css@gmail.com"><span class="link-icon">✉️</span><span class="link-text">michael4css@gmail.com</span></a>
+				<p><a href="tel:1-213-215-0628"><span class="link-icon">📞️</span><span class="link-text">213-215-0628</span></a>
+			</div>
+		</header>
+		<main id="nav-anchor">
+			<section>
+				<h1>Resume</h1>
+				<p>This is also downloadable as a <a href="../Michael-Landis.pdf" target="_blank">PDF</a> or <a href="../Michael-Landis.docx" target="_blank">Word</a> file.
+				<h2>Profile</h2>
+				<ul>
+					<li>Full-stack web developer with 15 years’ experience maintaining and redesigning Java-based web sites of top-three mutual fund company</li>
+					<li>Development lead for Adobe Experience Manager integration, overseeing technical aspects of component and workflow design and integrating Adobe Analytics</li>
+					<li>Lead developer and technical liaison for intercompany recordkeeping projects</li>
+					<li>Expert translator between technical, business and creative perspectives</li>
+				</ul>
+				
+				<h2>Experience</h2>
+				<h3>Capital Group Companies, Los Angeles, CA &mdash; 1999&ndash;2014</h3>
+				<p>Senior Application Developer and founding front-end developer for <a href="https://americanfunds.com" target="_blank">americanfunds.com</a>. Highlights of experience include 2 workflow management implementations, 3 <abbr title="content management system">CMS</abbr> conversions, 3 third-party recordkeeper architecture integrations, and 4 <abbr title="user experience">UX</abbr> redesigns. Specific relevant projects include:
+				
+				<h4>Advisor Site <abbr title="Adobe Experience Manager">AEM</abbr> Conversion, 2013&ndash;2014</h4>
+				<p>Incorporated financial advisors&rsquo; site into existing AEM structure. Responsibilities included:
+				<ul>
+					<li>Presenting investor- and advisor-specific branding elements in one set of site-agnostic templates</li>
+					<li>Incorporating user-based customization, dealer-based personalization, and analytics from back-end systems, including designing edge caching strategies for managing customization and personalization</li>
+					<li>Merging AEM with legacy calculators to provide seamless experience with legacy application code</li>
+				</ul>
+				
+				<h4>Investor Site AEM Conversion, 2011&ndash;2012</h4>
+				<p>Converted existing <abbr title="eXtensible Markup Language">XML</abbr>/<abbr title="Java Server Pages">JSP</abbr>-based site to AEM. Responsibilities included:
+				<ul>
+					<li>UX redesign implementation</li>
+					<li>Creation of AEM templates and components</li>
+					<li>Creation of secure, traceable workflow to meet requirements for industry oversight</li>
+					<li>Conversion of existing Adobe Analytics framework to AEM-specific integration, as well as integration of analytics from legacy transaction system.</li>
+					<li>Working with Accenture, UX and content teams to manage transition to content management system</li>
+				</ul>
+				
+				<h4>Broker Book of Business, 2009&ndash;2010</h4>
+				<p>Worked with DST Systems to translate their generic VISION broker accounts product into a company-specific back-end integration. Responsibilities included:
+				<ul>
+					<li>Technical lead for cross-company requirements development</li>
+					<li>Prototyped and built first-in-company front-end data integration and polling mechanisms</li>
+					<li>Built front-end presentation of primary account and landing page to UX specifications</li>
+				</ul>
+
+				<h4>Adobe Analytics Design and Implementation, 2007&ndash;2008</h4>
+				<p>Selected and implemented Adobe Analytics/Omniture SiteCatalyst. Responsibilities included:
+				<ul>
+					<li>Member of 3-person team to develop technical decision matrix for analytics package requirements</li>
+					<li>Worked with UX on page/site nomenclature organization to improve path tracking</li>
+					<li>Worked with Java developers and architects to balance caching and analytics strategies</li>
+					<li>Worked with UX/Content/<abbr title="business intelligence">BI</abbr> teams to shape requirements and manage expectations</li>
+				</ul>
+				
+				<h4>Home-grown CMS Conversion, 2003&ndash;2004</h4>
+				<p>Conversion of Investor site from FatWire to homegrown XML/JSP CMS. Responsibilities included:
+				<ul>
+					<li>Creation of data architecture with UX/Content team input</li>
+					<li>Creation of homegrown template and content delivery system using Apache Struts 1/Tiles 2</li>
+					<li>Development of initial traceable workflow to fulfill industry oversight requirements</li>
+				</ul>
+				
+				<h3>Aquent Partners, Los Angeles, CA &mdash; 1997&ndash;1999</h3>
+				<p>Provided HTML and print publishing services for various clients, including BP/ARCO and HOK
+				
+				<p class="divider">I have been on sabbatical since 2015.
+				
+				<h2>Education</h2>
+				<p>University of California, Los Angeles &mdash; B.S. in Mechanical Engineering, 1994
+				
+				<h2>Skills</h2>
+				<!-- I use H4 here instead of H3, even though semantically that is
+					 incorrect, because of the idea of creating a set of classes for H4
+					 that is identical to H3 feels awkward to me. This is a great example
+					 of why paradigms such as OOCSS and BEM can help. -->
+				<div class="columns-3">
+					<div>
+						<h4>Languages</h4>
+						<ul class="no-margin">
+							<li>HTML, CSS, SASS/SCSS, JS, Typescript</li>
+							<li>Java, JSP, PHP</li>
+							<li>SQL</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Servers</h4>
+						<ul class="no-margin">
+							<li>Apache Web Server</li>
+							<li>Apache Tomcat</li>
+							<li>Weblogic</li>
+							<li>Netcache</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Tools</h4>
+						<ul class="no-margin">
+							<li>Eclipse, IntelliJ</li>
+							<li>JUnit/JSUnit/Jest</li>
+							<li>ClearQuest, Clearcase, Git</li>
+							<li>Trello</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Frameworks</h4>
+						<ul class="no-margin">
+							<li>jQuery, jQueryUI</li>
+							<li>React</li>
+							<li>Bootstrap</li>
+							<li>Struts, Spring</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Applications</h4>
+						<ul class="no-margin">
+							<li>Adobe Experience Manager</li>
+							<li>Adobe Analytics</li>
+						</ul>
+					</div>
+					<div>
+						<h4>Processes</h4>
+						<ul class="no-margin">
+							<li>Agile, RUP</li>
+							<li>TDD</li>
+						</ul>
+					</div>
+				</div>
+				
+				<h2>References</h2>
+				<p>Available upon request.
+			</section>
+			<nav id="navigation" class="collapsed">
+				<ul>
+					<li><a href="../">About this site</a></li>
+					<li><a href="../offer">What I offer</a></li>
+					<li><a href="../java">Java experience and philosophy</a></li>
+					<li><strong>Resume</strong></li>
+					<li><a href="../react">React example</a></li>
+					<li><a href="../angular">Angular example</a></li>
+				</ul>
+			</nav>
+		</main>
+		<footer>
+			<div class="nav-tail"></div>
+			<p class="copyright">Copyright &copy;<span data-point="current-year"></span> Michael Landis
+		</footer>
+		<script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<script src="../script/utilities.js"></script>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+I have three different data structures in the top-level Redux store. They are populated and used as follows:
+
+-------------------------------
+HeaderContainer <-- person.json
++-> user
+    +-> HeaderContainer
+        +-> Header
+    +-> Footer
+-------------------------------
+
+The user state provides name and title information for the site's header and footer. HeaderContainer takes data from a local (hard-coded) JSON file to populate the user state. HeaderContainer and Footer then consumes this data.
+
+-------------------------------
+NavigationAnchor <-- props.id
+NavigationToggle <-- onClick
++-> navigation
+    +-> NavigationToggle
+    +-> NavigationContainer
+        +-> Navigation
+-------------------------------
+
+The navigation state provides the positioning required to anchor the navigation drawer for the mobile presentation.
+
+NavigationAnchor creates the div used to locate the bottom of the header and populates the navigation state with its id for use by the toggle. I chose to use a separate element instead of measuring the header directly to avoid making assumptions of where I wanted to pin the navigation.
+
+NavigationToggle consumes the id provided by NavigationAnchor. On click, it uses the id to find the anchor's vertical position and populates the navigation state with that. It also toggles the visibility in the navigation state.
+
+NavigationContainer consumes the position and visibility data to determine Navigation's top and visibility properties.
+
+This data "web" is complex because the different elements are diffused across the component landscape, and none of the content HTML or containers give us the positioning information we need. The navigation makes sense at the bottom of the HTML, which prevents it from using any static positioning data. I wanted to keep the anchor id DRY, rather than duplicating it in the HTML and/or JavaScript. With the toggle in the header, the anchor between components, and the navigation inside the main content, the only way to keep the data DRY was to put it in the store from wherever the data was available in the application structure, then let it flow down into the appropriate destinations.
+
+---------------------------------------------
+Query <-- query term
+GoogleContainer <-- Google custom search APIs
++-> search
+    +-> GoogleContainer
+        +-> Query
+        +-> Results (text)
+        +-> Results (image)
+-------------------------------
+
+The search state is fairly straightforward. Populating the query form populates the query search state property and the XHR's to Google. GoogleContainer consumes all the data as it comes in. The query property is immediately populated, triggering the results UI presentation. As each XHR returns, GoogleContainer consumes the results and populates the appropriate Results component.

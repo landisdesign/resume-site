@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<!--
+	CSS-2 Layout
+
+	I figured that, if I am working with a large corporation, it may be in a
+	space where it cannot manage the browser testing required to switch from an
+	old float layout to a flexbox layout, or to size everything based upon box
+	versus padding, or use rem's versus em's. I'm also assuming we can't do
+	fancy stuff like calc(). We use the code we're given!
+
+	Rather than using BEM, I am assuming this company is adhering to a more
+	traditional cascade, tags wherever possible, classes where necessary and IDs
+	to define semantic data.
+-->
+	<head>
+		<title>Michael Landis, Web Developer and Technical Translator</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Given the size of the IE (not Edge) market I am forgoing the ICO version. -->
+		<link rel="icon" href="../favicon.png">
+		<link rel="stylesheet" href="//use.typekit.net/gsn5mzx.css" integrity="sha384-3KoIwGCi3wEjKL/6jfwJ91KrSyMG4TBBjHmrHRcrLVHNdxXHsIRGwsVuaQM13+It" crossorigin="anonymous">
+		<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<!--
+			The stylesheet for this page is compiled via SASS from source starting at
+			/development/scss/java/java.scss. Each page has some differences that reflect
+			differences in layout frameworks.
+		-->
+		<link rel="stylesheet" href="java.css">
+	</head>
+	<body>
+		<header>
+			<div id="user">
+				<h1>Michael Landis</h1>
+				<p>Web Developer
+				<p>Technical Translator
+			</div>
+			<div id="contact-information">
+				<p class="navigation"><span class="fas fa-bars collapsed" data-toggle-destination-id="navigation" data-toggle-bounds-id="content"></span></p>
+				<p class="address"><a href="mailto:michael4css@gmail.com"><span class="icon">✉️</span><span class="text">michael4css@gmail.com</span></a>
+				<p class="address"><a href="tel:1-213-215-0628"><span class="icon">📞️</span><span class="text">213-215-0628</span></a>
+			</div>
+		</header>
+		<div id="content">
+			<main>
+				<div>
+					<h1>Java experience and philosophy</h1>
+					<p>I started programming BASIC when I was 9, with a Apple IIe in a school computer room, and was programming in Assembly by the time I was 12. I always wanted to stretch the edge of what I could do with my computers. In high school and college I learned Pascal and C++ to write programs on Macintoshes. Eventually I learned Java because I wanted to know how JSPs worked.
+
+					<h2>Experience</h2>
+					<p>Most of my Java experience has been on WebLogic and Tomcat, creating middleware code for <a href="https://americanfunds.com" target="_blank">americanfunds.com</a>. Specific projects include:
+
+					<ul>
+						<li>Migrated to and maintained the homegrown Struts- and XML-based <abbr title="content management system">CMS</abbr> (2004&ndash;2011)</li>
+						<li>Migrated the Literature Center to use this homegrown CMS instead of its own separate Struts instance (2006)</li>
+						<li>Wrote an entire content site conjoined with a DST financial transaction site, including the cross-server login status management (2009)</li>
+						<li>Creating components and templates in <abbr title="Adobe Experience Manager">AEM</abbr>, writing both the Java and (at the time) ExtJS elements of each (2012&ndash;2014)</li>
+					</ul>
+
+					<p>These were done in addition to the front-end development that was my focus.
+
+					<h2>Back-end Development Philosophy</h2>
+					<p>When I first read WROX&rsquo;s <cite>Java Server Pages</cite> tome in 2003, I was struck by their reference to programming patterns. When I finally got my hands on <cite>Design Patterns</cite>, I was completely blown away.
+
+					<p>Ever since that time I see my programs in terms of patterns. When I start seeing <code>if/else</code> trees or overly complex <code>switch/case</code> blocks, I immediately start considering applying Strategy patterns instead. When I see collections of functionality that are shared across multiple classes, I start considering Abstract Factories and Templates. Dependency injection is simply the next in a long line of useful ideas boiled down into a recognizable label and process.
+
+					<p>For me, the second most influential book after <cite>Design Patterns</cite> is Steve McConnell&rsquo;s <cite>Code Complete</cite>. His ideas of complexity management resonate strongly with me. Looking at variable lifespans, checking the complexity of a method by counting the number of conditional checks, making names as absolutely readable as possible, using white space as a formatting tool, all are techniques I use and appreciate on a daily basis.
+
+					<p>Between the complexity and simplicity of both books, I look for a balance between inflexibility and gold-plating. When it is simple to write for the future, I will do that, but it must be simple. If it is unreadable by the next developer coming onto a project, it becomes far more costly in the future, as lava code accumulates that nobody wants to touch.
+
+					<p>While I&rdquo;ve been on my sabbatical, I&rdquo;ve been looking at what&rsquo;s been introduced since CG upgraded to Java SE 6. It&rsquo;s great to see Oracle taking a stab at functional programming, and I&rsquo;m curious to see how it is being adopted in the workplace.
+				</div>
+			</main>
+			<div id="navigation">
+				<nav>
+					<ul>
+						<li><a href="../">About this site</a></li>
+						<li><a href="../offer">What I offer</a></li>
+						<li><strong>Java experience and philosophy</strong></li>
+						<li><a href="../resume">Resume</a></li>
+						<li><a href="../react">React example</a></li>
+						<li><a href="../angular">Angular example</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<footer>
+			<div></div>
+			<p class="copyright">Copyright &copy;<span data-point="current-year"></span> Michael Landis
+		</footer>
+		<script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src="../script/utilities.js"></script>
+	</body>
+</html>

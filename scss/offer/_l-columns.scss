@@ -1,0 +1,25 @@
+// Columns turn to one column on the smallest breakpoint.
+
+@mixin l-columns--tablet() {
+
+	.l-columns {
+		display: flex;
+		background-color: $color-frame;
+	
+		&__column--25-75-1 {
+			order: 1;
+			width: 25%;
+		}
+	
+		&__column--25-75-2 {
+			order: 2;
+			width: 75%;
+		}
+	}
+}
+
+@mixin l-columns--desktop() {
+
+	// Included to complete breakpoint mixin pattern
+
+}

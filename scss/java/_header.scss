@@ -1,0 +1,201 @@
+
+$left-column-width: 81px;
+$right-column-width: 5em;
+$padding: 0 $right-column-width 0 $left-column-width;
+$margins: 0 #{-$right-column-width} 0 #{-$left-column-width};
+
+$desktop-left-column-width: 131px;
+$desktop-right-column-width: 20em;
+$desktop-padding: 0 $desktop-right-column-width 0 $desktop-left-column-width;
+
+%header-text {
+	font: normal .925em/1.25 $font-stack-sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	color: $color-text;
+	background-color: $color-background;
+	font-size: 100%;
+}
+
+header {
+	min-height: 80px;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	padding: $padding;
+	background: $color-frame url(../images/logo.png) 15px / 48px no-repeat;
+	@extend %clear;
+
+	& > * {
+		float: left;
+		position: relative;
+	}
+
+	&:before { // I'm assuming that generated content works well enough on the site to permit generating a block to push the content off the icon.
+		content: '';
+		display: block;
+		float: left;
+		position: relative;
+		width: $left-column-width;
+		margin-left: -$left-column-width;
+	}
+
+	&:after { // This is a progressive enhancement to an older code base. This builds atop the above clearing code.
+		position: relative;
+		top: 15px;
+		width: 100%;
+		height: 15px;
+		padding: $padding;
+		margin: $margins;
+		background: edge-curve(bottom);
+	}
+
+	#user {
+		width: 100%;
+		padding-top: 15px;
+
+		h1 {
+			padding-bottom: (.25em/1.5);
+			font: bold 1.5em/.9 $font-stack-sans-serif;
+		}
+
+		p {
+			display: inline-block;
+			padding: .25em 0 .2em;
+			margin-right: (1em/.925);
+			@extend %header-text;
+		}
+	}
+
+	#contact-information {
+		width: $right-column-width;
+		margin-right: -$right-column-width;
+		margin-left: -15px;
+		text-align: right;
+
+		.navigation {
+			margin: 15px 0 .25em;
+			padding-top: .25em;
+			font-size: 100%;
+			line-height: .9;
+			@extend %header-text;
+		}
+
+		.address {
+			display: inline-block;
+			padding: .25em 0 .2em;
+			margin: 0 (.1em/.925) 0 (.25em/.925);
+			@extend %header-text;
+		}
+
+		a, .navigation {
+			@include linkProperties();
+		}
+
+		.text {
+			display: none;
+		}
+	}
+}
+
+@mixin header--tablet() {
+
+	header {
+		position: static;
+		padding-left: ($left-column-width - 2);
+
+		&:before {
+			width: ($left-column-width - 2);
+			margin-left: -($left-column-width - 2);
+		}
+
+		&:after { // we need to retain the clearing attributes, so just clearing shadow attributes
+			position: static;
+			background: transparent;
+		}
+
+		#user {
+			h1 {
+				padding-bottom: 0;
+				font-size: 2em;
+				line-height: 1;
+			}
+
+			p {
+				padding-bottom: 0;
+				margin-right: 1em;
+				font-size: 1em;
+			}
+		}
+	
+		#contact-information {
+			padding-top: 2em;
+			margin-top: 15px;
+
+			.navigation {
+				display: none;
+			}
+
+			.address {
+				padding: .25em 0 0;
+				margin: 0 .1em 0 .25em;
+				font-size: 1em;
+			}
+		}
+	}
+}
+
+@mixin header--desktop() {
+
+	%header-text--desktop {
+		display: block;
+		padding: 0;
+		font-size: 1.25em;
+	}
+
+	header {
+		min-height: 130px;
+		padding: $desktop-padding;
+		background-size: 96px;
+		background-position: 15px 50%;
+
+		&:before {
+			width: $desktop-left-column-width;
+			margin-left: -$desktop-left-column-width;
+		}
+		
+		#user {
+			h1 {
+				font-size: 3em;
+			}
+
+			p {
+				@extend %header-text--desktop;
+			}
+		}
+
+		#contact-information {
+			width: $desktop-right-column-width;
+			padding-top: 3em;
+			margin-right: -$desktop-right-column-width;
+
+			.address {
+				@extend %header-text--desktop;
+			}
+
+			.text {
+				display: inline;
+			}
+
+			.icon {
+				display: none;
+			}
+		}
+	}
+}

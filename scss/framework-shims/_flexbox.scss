@@ -1,0 +1,118 @@
+a:link,
+a:visited {
+	color: #007BFF;
+	text-decoration: none;
+}
+a:hover {
+	color: #0056B3;
+	text-decoration: underline;
+}
+
+code {
+	color: #E83E8C;
+	font: normal 87.5% SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	word-break: break-word;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+
+	h1 {
+		padding-bottom: .25rem;
+	}
+
+	p {
+		display: inline-block;
+		padding: .25rem 0 .2rem;
+	}
+	
+	.logo {
+		flex: 1 0 auto; // This is required for Firefox in spite of justify-content: space-between
+	}
+
+	.contact-information {
+		text-align: right;
+		
+		p {
+			margin: 0 .1rem 0 .25rem;
+		}
+	}
+	
+	.toggle {
+		margin-bottom: .1rem;
+	}
+
+	.link-text {
+		display: none;
+	}
+}
+
+section {
+	padding: .1px 1rem; // .1px to force internal margins to not collapse. Necessary for fixed menu positioning.
+}
+
+@mixin flexbox--tablet() {
+
+	header {
+		h1 {
+			padding-bottom: 0;
+		}
+
+		p {
+			padding-bottom: 0;
+		}
+
+		.toggle {
+			display: none;
+		}
+	}
+	
+	main {
+		display: flex;
+		background-color: #FFF;
+	
+		nav {
+			flex: none;
+			order: -1;
+			width: 25%;
+		}
+	}
+	
+	footer {
+		display: flex;
+	}
+	
+	.nav-tail {
+		flex: none;
+		width: 25%;
+	}
+	
+	p.copyright {
+		width: 75%;
+	}
+}
+
+@mixin flexbox--desktop() {
+
+	header {
+
+		> div {
+			margin-bottom: .1rem;
+		}
+
+		p {
+			display: block;
+			padding: 0;
+		}
+		
+		.link-icon {
+			display: none;
+		}
+		
+		.link-text {
+			display: inline;
+		}
+	}
+}

@@ -1,0 +1,8 @@
+@import "../../_common";
+
+@media (min-width: $tablet-width) {
+	:host {
+		display: flex;
+		background-color: $color-frame;
+	}
+}

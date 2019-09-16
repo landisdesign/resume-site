@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<!--
+	Bootstrap Example
+	
+	As the de facto king of front-end UI frameworks, I had to include an example here, but
+	admittedly I'm not a fan of front-end frameworks in general. While they make a lot of
+	sense from an entrepreneurial web designer/developer perspective, I found that with
+	larger web departments with dedicated design teams, I found myself having to explain
+	why we couldn't make their designs in the way they wanted instead of being able to
+	meet the design needs exactly. Knowing how flexbox and float grids work is essential
+	for any front-end design, especially with RWD and mobile-first, but relying on someone
+	else's framework is a tradeoff between development speed, page weight and flexibility.
+-->
+	<head>
+		<title>Michael Landis, Web Developer and Technical Translator</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Given the size of the IE (not Edge) market I am forgoing the ICO version. -->
+		<link rel="icon" href="favicon.png">
+		<link rel="stylesheet" href="//use.typekit.net/gsn5mzx.css" integrity="sha384-3KoIwGCi3wEjKL/6jfwJ91KrSyMG4TBBjHmrHRcrLVHNdxXHsIRGwsVuaQM13+It" crossorigin="anonymous">
+		<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<!--
+			The stylesheet for this page is compiled via SASS from source starting at
+			/development/scss/index.scss. Each page has some differences that reflect
+			differences in layout frameworks.
+		-->
+		<link rel="stylesheet" href="index.css">
+	</head>
+	<body>
+		<header class="page container-fluid">
+			<div class="row">
+				<div class="col-12">
+					<div class="row">
+						<div class="col-sm-12 col-10">
+							<h1>Michael Landis</h1>
+						</div>
+						<div class="d-sm-none col-2 text-right">
+							<!--
+								I try to make my data- attributes as self-documenting as
+								possible. I could also include a "toggle" class to
+								identify that this is the toggle for the destination
+								container, but since I wasn't planning to style the toggle
+								itself, and I could style based upon the data attribute
+								name, I didn't feel the need.
+								
+								The fa* classes are associated with the FontAwesome
+								library.
+								
+								[This comment is kinda ridiculous for its small width,
+								right? I like wrapping comments to 80 characters, but am
+								happy to follow the work environment I'm in.] -->
+							<a href="#navigation" class="fas fa-bars collapsed" data-toggle-destination-id="navigation"></a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-9">
+							<p class="d-inline-block d-md-block">Web Developer
+							<p class="d-inline-block d-md-block">Technical Translator
+						</div>
+						<div class="col-md-6 col-3 text-right">
+							<p class="d-inline d-md-block"><a href="mailto:michael4css@gmail.com"><span class="d-inline d-md-none">✉️</span><span class="d-none d-md-inline">michael4css@gmail.com</span></a>
+							<p class="d-inline d-md-block"><a href="tel:1-213-215-0628"><span class="d-inline d-md-none">📞️</span><span class="d-none d-md-inline">213-215-0628</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section class="page container-fluid">
+			<div class="row">
+				<div class="col-sm-3 col-12 h-sm-100 h-auto">
+					<nav id="navigation" class="collapsed">
+						<ul>
+							<li><strong>About this site</strong></li>
+							<li><a href="offer">What I offer</a></li>
+							<li><a href="java">Java experience and philosophy</a></li>
+							<li><a href="resume">Resume</a></li>
+							<li><a href="react">React example</a></li>
+							<li><a href="angular">Angular example</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="main-content col-sm-9 col-12">
+					<h1>About this site</h1>
+					<p>Because my last job covered 15 years at a financial company, and because I decided to leave 5 years ago, much of my work is either inaccessible or replaced by more recent development. I made this site to illustrate my skills and thought processes for prospective clients and employers.
+					<p>Each page is written using different frameworks. The code is commented, both for self-documentation purposes and to provide commentary on my perspectives on the different frameworks I use. Each framework has pros and cons, and one of my strengths is acknowledging how choosing a particular framework impacts the flexibility of development and design in its own way &ndash; and using it to generate a similar user experience regardless of its weaknesses.
+					<p>I wrote the pages in the following order:
+					<ol>
+						<li>About this site (this page)</li>
+						<li>Resume</li>
+						<li>What I offer</li>
+						<li>React example</li>
+						<li>Angular example</li>
+						<li>Java experience and philosophy</li>
+					</ol>
+					<p>The comments reflect changes and things I learned on each page and applied to the next.
+					<p>With the exception of <abbr title="Content Delivery Network">CDN</abbr>-based libraries, I&rsquo;ve left my code unminified and unbundled for readability, with the exception of the React pages, described below. This is not something I recommend for production code and only do this to preserve the readability and comments I feel are valuable for the development process.
+					<p>I used <abbr title="Sassy CSS">SCSS</abbr> to create the <abbr title="Cascading Style Sheets">CSS</abbr> files associated with this site. They are accessible <a href="./scss">here</a>, in the same folder structure as how the CSS appears on the site.
+					<p>With React, I went ahead and ran the code through a production build to bundle the code and avoid the Babel on-the-fly overhead. The source code is noted in the application.
+
+					<h2>#notadesigner</h2>
+					<p>Although I like to think I can recognize usability flaws, and I enjoy branding, I don&rsquo;t claim to be a visual web designer. (I think the visual design of this site illustrates my case.) My intention is to demonstrate my development skills and learning speed, and hopefully that is conveyed here. (If you are interested in my less-development-related skills, my main WordPress site is available at the <a href="/" target="_blank">site root</a>.)
+				</div>
+			</div>
+		</section>
+		<footer class="page container-fluid">
+			<div class="row">
+				<div class="col-sm-3 col-12 nav-tail">
+				</div>
+				<div class="col-sm-9 col-12">
+					<p class="copyright">Copyright &copy;<span data-point="current-year"></span> Michael Landis
+				</div>
+			</div>
+		</footer>
+		<script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="//stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<script src="script/utilities.js"></script>
+	</body>
+</html>

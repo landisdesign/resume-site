@@ -1,0 +1,42 @@
+.title {
+  margin: 2rem 0 1rem;
+  font: bold 3rem/1 mr-eaves-modern, sans-serif;
+}
+
+.description {
+  margin: 0 0 1rem;
+  font: normal 1rem/1.5 mandrel-normal, serif;
+}
+
+.link, .link:link, .link:visited {
+  color: #007BFF;
+  text-decoration: none;
+}
+.link:hover {
+  color: #0056B3;
+  text-decoration: underline;
+}
+
+.results-title {
+  margin: 0 0 1rem;
+  font: bold 2rem/1.5 mr-eaves-modern, sans-serif;
+}
+
+@media (min-width: 64em) {
+  .results {
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: -1rem;
+  }
+  .results-title {
+    width: 100%;
+    margin-left: 1rem;
+  }
+
+  .column {
+    width: 50%;
+    padding-left: 1rem;
+  }
+}
+
+/*# sourceMappingURL=google.component.css.map */

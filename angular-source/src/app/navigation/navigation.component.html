@@ -1,0 +1,8 @@
+<nav class="navigation" [class.collapsed]="!visible" [style.top]="position ? position + 'px' : 'auto'">
+	<ul class="list">
+		<li *ngFor="let item of navigation" class="item">
+			<a *ngIf="!item.current" class="link" [href]="item.link">{{ item.text }}</a>
+			<strong *ngIf="item.current" class="current">{{ item.text }}</strong>
+		</li>
+	</ul>
+</nav>

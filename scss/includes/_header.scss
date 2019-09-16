@@ -1,0 +1,80 @@
+header#{$header-class} {
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	min-height: 80px;
+	padding: 15px 15px 15px 65px;
+	background: $color-frame url(#{$image-root}images/logo.png) 15px / 48px no-repeat;
+
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		height: 15px;
+		background: edge-curve(bottom);
+	}
+
+	h1 {
+		margin: 0 0 0 1rem;
+		font-size: 1.5rem;
+		line-height: .9;
+	}
+
+	p {
+		margin: 0 0 0 1rem;
+		font: normal .925rem/1.25 $font-stack-sans-serif;
+	}
+
+	p.d-inline {
+		margin: 0 .1rem;
+	}
+}
+
+@mixin header--tablet() {
+
+	header#{$header-class} {
+		position: static;
+		min-height: 80px;
+		padding-left: 63px;
+
+		&:after {
+			display: none;
+		}
+
+		h1 {
+			font-size: 2rem;
+			line-height: 1;
+		}
+
+		p {
+			font-size: 1rem;
+		}
+	
+		.menu-toggle {
+			display: none;
+		}
+	}
+
+}
+
+@mixin header--desktop() {
+
+	header#{$header-class} {
+		min-height: 130px;
+		padding-left: 115px;
+		background-size: 96px;
+		background-position: 15px 50%;
+
+		h1 {
+			font-size: 3em;
+		}
+
+		p {
+			font-size: 1.25rem;
+		}
+	}
+
+}

@@ -1,0 +1,10 @@
+<header class="header">
+	<div class="user">
+		<h1 class="name">{{ name }}</h1>
+		<p *ngFor="let title of titles" class="title">{{ title }}</p>
+	</div>
+	<div class="contact-information">
+		<p class="navigation"><res-nav-toggle></res-nav-toggle></p>
+		<res-address-line *ngFor="let address of addresses" [address]="address"></res-address-line>
+	</div>
+</header>

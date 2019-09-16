@@ -1,0 +1,8 @@
+@media (min-width: 36em) {
+  :host {
+    display: flex;
+    background-color: #FFF;
+  }
+}
+
+/*# sourceMappingURL=columns.component.css.map */

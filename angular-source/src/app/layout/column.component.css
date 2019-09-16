@@ -1,0 +1,76 @@
+@media (min-width: 36em) {
+  :host[order="1"] {
+    order: 1;
+  }
+  :host[order="2"] {
+    order: 2;
+  }
+  :host[order="3"] {
+    order: 3;
+  }
+  :host[order="4"] {
+    order: 4;
+  }
+  :host[order="5"] {
+    order: 5;
+  }
+  :host[order="6"] {
+    order: 6;
+  }
+  :host[order="7"] {
+    order: 7;
+  }
+  :host[order="8"] {
+    order: 8;
+  }
+  :host[order="9"] {
+    order: 9;
+  }
+  :host[order="10"] {
+    order: 10;
+  }
+  :host[width="10"] {
+    width: 10%;
+  }
+  :host[width="20"] {
+    width: 20%;
+  }
+  :host[width="25"] {
+    width: 25%;
+  }
+  :host[width="30"] {
+    width: 30%;
+  }
+  :host[width="33"] {
+    width: 33%;
+  }
+  :host[width="40"] {
+    width: 40%;
+  }
+  :host[width="50"] {
+    width: 50%;
+  }
+  :host[width="60"] {
+    width: 60%;
+  }
+  :host[width="66"] {
+    width: 66%;
+  }
+  :host[width="70"] {
+    width: 70%;
+  }
+  :host[width="75"] {
+    width: 75%;
+  }
+  :host[width="80"] {
+    width: 80%;
+  }
+  :host[width="90"] {
+    width: 90%;
+  }
+  :host[width="100"] {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=column.component.css.map */

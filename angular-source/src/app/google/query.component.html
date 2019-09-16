@@ -1,0 +1,9 @@
+<div class="anchor">
+	<div [ngClass]="queryBoxClass">
+		<form [formGroup]="queryForm" (ngSubmit)="submitForm($event)">
+			<label class="label" htmlFor="query-input">Enter search term:</label>
+			<input class="input" id="query-input" required formControlName="query" />
+			<input class="button" type="submit" value="Search" [disabled]="query.invalid" />
+		</form>
+	</div>
+</div>

@@ -1,0 +1,43 @@
+.address {
+  display: inline-block;
+  padding: 0.25rem 0 0.2rem;
+  margin: 0 0.1rem 0 0.25rem;
+  font: normal 0.925rem/1.25 mr-eaves-modern, sans-serif;
+}
+
+.link, .link:link, .link:visited {
+  color: #007BFF;
+  text-decoration: none;
+}
+.link:hover {
+  color: #0056B3;
+  text-decoration: underline;
+}
+
+.text {
+  display: none;
+}
+
+@media (min-width: 36em) {
+  .address {
+    padding-bottom: 0;
+    font-size: 1rem;
+  }
+}
+@media (min-width: 48em) {
+  .address {
+    display: block;
+    padding: 0;
+    font-size: 1.25rem;
+  }
+
+  .text {
+    display: inline;
+  }
+
+  .icon {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=address-line.component.css.map */

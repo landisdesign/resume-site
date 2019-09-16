@@ -1,0 +1,99 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  min-height: 80px;
+  padding: 15px 15px 15px 65px;
+  background: #FFF url(./logo.png) 15px/48px no-repeat;
+}
+.header:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 15px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+.user {
+  flex: 1 0 auto;
+}
+
+.name {
+  padding-bottom: 0.25rem;
+  margin: 0 0 0 1rem;
+  font: bold 1.5rem/0.9 mr-eaves-modern, sans-serif;
+}
+
+.title {
+  display: inline-block;
+  padding: 0.25rem 0 0.2rem;
+  margin: 0 0 0 1rem;
+  font: normal 0.925rem/1.25 mr-eaves-modern, sans-serif;
+}
+
+.contact-information {
+  text-align: right;
+}
+
+.navigation {
+  margin: 0 0 0.25rem;
+  font-size: 100%;
+  line-height: 1;
+}
+
+@media (min-width: 36em) {
+  .header {
+    position: static;
+    min-height: 80px;
+    padding-left: 63px;
+  }
+  .header:after {
+    display: none;
+  }
+
+  .name {
+    padding-bottom: 0;
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  .title {
+    padding-bottom: 0;
+    font-size: 1rem;
+  }
+}
+@media (min-width: 48em) {
+  .header {
+    min-height: 130px;
+    padding-left: 115px;
+    background-size: 96px;
+    background-position: 15px 50%;
+  }
+
+  .user,
+.contact-information {
+    margin-bottom: 0.1rem;
+  }
+
+  .name {
+    font-size: 3em;
+  }
+
+  .title {
+    display: block;
+    padding: 0;
+    font-size: 1.25rem;
+  }
+
+  .navigation {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=header.component.css.map */

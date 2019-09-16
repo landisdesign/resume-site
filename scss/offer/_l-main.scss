@@ -1,0 +1,27 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	margin: 0;
+	padding: 0;
+	color: $color-text;
+	background-color: $color-background;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+@mixin l-main--tablet() {
+
+	// Included to complete breakpoint mixin pattern
+
+}
+
+@mixin l-main--desktop() {
+
+	// Included to complete breakpoint mixin pattern
+
+}

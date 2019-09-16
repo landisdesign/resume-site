@@ -1,0 +1,17 @@
+// This is incredibly unweildy and I wouldn't do this on a client site. I'm sharing the
+// same variables across all the different layouts and on a desktop not set up to be a
+// server. On a client site I would expect includes/variables to be in a more accessible
+// location, preferably root-relative.
+@import "../../includes/variables";
+
+@mixin linkProperties() {
+	&, &:link, &:visited {
+		color: #007BFF;
+		text-decoration: none;
+	}
+
+	&:hover {
+		color: #0056B3;
+		text-decoration: underline;
+	}
+}

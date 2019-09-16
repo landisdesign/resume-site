@@ -1,0 +1,23 @@
+.c-footer__copyright {
+  margin: 1rem 0;
+  text-align: center;
+  font: normal 1rem mr-eaves-modern, sans-serif;
+}
+
+@media (min-width: 36em) {
+  .c-footer {
+    display: flex;
+  }
+  .c-footer__padding {
+    width: 25%;
+    height: 30px;
+    border-radius: 0 0 30px;
+    margin-bottom: 2rem;
+    background-color: #FFF;
+  }
+  .c-footer__copyright {
+    width: 75%;
+  }
+}
+
+/*# sourceMappingURL=Footer.css.map */

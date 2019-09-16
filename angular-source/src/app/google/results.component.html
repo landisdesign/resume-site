@@ -1,0 +1,15 @@
+<div [class]="listClass">
+	<h3 class="title">{{ title }} results</h3>
+	<ng-container *ngIf="results && results.success">
+		<div *ngFor="let result of results.items" class="item">
+			<h4 class="item-title"><a class="item-link" href="{{ result.linkURL }}" target="_blank" innerHtml="{{ result.linkText }}"></a></h4>
+			<ng-container *ngIf="type == 'text'">
+				<p class="text" innerHtml="{{ result.content }}"></p>
+			</ng-container>
+			<ng-container *ngIf="type == 'image'">
+				<img class="image" src="{{ result.content }}" (error)="loadAlternate($event, result.errorSRC)"/>
+			</ng-container>
+		</div>
+	</ng-container>
+	<div *ngIf="results && !results.success" class="error">Error: Results couldn&rsquo;t be provided.</div>
+</div>

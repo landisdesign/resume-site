@@ -1,0 +1,19 @@
+@import "../../../_common";
+
+@media (min-width: $tablet-width) {
+
+	.l-columns {
+		display: flex;
+		background-color: $color-frame;
+	
+		&__column--25-75-1 {
+			order: 1;
+			width: 25%;
+		}
+	
+		&__column--25-75-2 {
+			order: 2;
+			width: 75%;
+		}
+	}
+}

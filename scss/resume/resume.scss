@@ -1,0 +1,27 @@
+@import "../includes/variables";
+$image-root: #{"../"};
+$framework: "flexbox";
+$header-class: "";
+
+@import "../includes/tags";
+@import "../includes/header";
+@import "../includes/content";
+@import "../includes/navigation";
+@import "../includes/footer";
+@import "../framework-shims/flexbox";
+
+@media (min-width: 36em) {
+	@include header--tablet();
+	@include content--tablet();
+	@include navigation--tablet();
+	@include footer--tablet();
+	@include flexbox--tablet();
+}
+
+@media (min-width: 48em) {
+	@include header--desktop();
+	@include content--desktop();
+	@include navigation--desktop();
+	@include footer--desktop();
+	@include flexbox--desktop();
+}

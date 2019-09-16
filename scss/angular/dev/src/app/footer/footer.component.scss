@@ -1,0 +1,27 @@
+@import "../../_common";
+
+.copyright {
+	margin: 1rem 0;
+	text-align: center;
+	font: normal 1rem $font-stack-sans-serif;
+}
+
+@media (min-width: $tablet-width) {
+
+	.footer {
+		display: flex;
+
+	}
+
+	.padding {
+		width: 25%;
+		height: 30px;
+		border-radius: 0 0 30px;
+		margin-bottom: 2rem;
+		background-color: $color-frame;
+	}
+	
+	.copyright {
+		width: 75%;
+	}
+}

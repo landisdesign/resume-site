@@ -1,0 +1,81 @@
+@import "../../_common";
+
+%text-description {
+	margin: 0 0 1rem;
+	font: normal 1rem/1.5 $font-stack-text;
+}
+
+%button-properties {
+	width: 6rem;
+	height: 1.5rem;
+	border: 1px solid;
+	margin-left: 1rem;
+	color: #FFF;
+	font: normal 1.25rem/1 $font-stack-sans-serif;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+%disabled-button-colors {
+	border-color: #999;
+	background-color: #CCC;
+	color: #333;
+}
+
+.container {
+	min-width: 100%;
+	padding: 1rem;
+	border: 1px solid #ABC;
+	margin: 0 0 1rem;
+	transition: all .5s;
+
+	.button {
+		@extend %button-properties;
+		border-color: #036;
+		background-color: #369;
+		transition: border-color, background-color .5s;
+	}
+
+	&.transitted .button {
+		transition: none;
+	}
+
+	.button[disabled] {
+		@extend %disabled-button-colors;
+	}	
+
+	&--initial {
+		min-width: 60%;
+		padding: 0;
+		border: 1px solid #EEE;
+		margin: 2rem 0;
+		transition: all .5s;
+
+		.button {
+			@extend %button-properties;
+			border-color: #603;
+			background-color: #967;
+		}
+
+		.button[disabled] {
+			@extend %disabled-button-colors;
+		}
+	}
+}
+
+.anchor {
+	display: flex;
+	justify-content: center;
+}
+
+.label {
+	display: block;
+	margin-bottom: .5rem;
+	font: normal 1.25rem/1 $font-stack-sans-serif;
+}
+
+.input {
+	width: calc(100% - 7rem - 4px);
+	height: 1.5rem;
+	font-size: 1rem;
+}

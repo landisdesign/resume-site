@@ -1,0 +1,38 @@
+@import "../../_common";
+
+.title {
+	margin: 2rem 0 1rem;
+	font: bold 3rem/1 $font-stack-sans-serif;
+}
+
+.description {
+	margin: 0 0 1rem;
+	font: normal 1rem/1.5 $font-stack-text;
+}
+
+.link {
+	@include linkProperties();
+}
+
+.results-title {
+	margin: 0 0 1rem;
+	font: bold 2rem/1.5 $font-stack-sans-serif;
+}
+
+@media (min-width: $large-desktop-width) {
+	.results {
+		display: flex;
+		flex-flow: row wrap;
+		margin-left: -1rem;
+		
+		&-title {
+			width: 100%;
+			margin-left: 1rem;
+		}
+	}
+
+	.column {
+		width: 50%;
+		padding-left: 1rem;
+	}
+}

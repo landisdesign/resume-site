@@ -1,0 +1,13 @@
+@import "../includes/variables";
+
+@mixin linkProperties() {
+	&, &:link, &:visited {
+		color: #007BFF;
+		text-decoration: none;
+	}
+
+	&:hover {
+		color: #0056B3;
+		text-decoration: underline;
+	}
+}

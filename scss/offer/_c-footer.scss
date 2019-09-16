@@ -1,0 +1,31 @@
+.c-footer__copyright {
+	margin: 0 0 1rem;
+	text-align: center;
+	font: normal 1rem $font-stack-sans-serif;
+}
+
+
+@mixin c-footer--tablet() {
+
+	.c-footer {
+		display: flex;
+
+		&__padding {
+			width: 25%;
+			height: 30px;
+			border-radius: 0 0 30px;
+			margin-bottom: 2rem;
+			background-color: $color-frame;
+		}
+		
+		&__copyright {
+			width: 75%;
+		}
+	}
+}
+
+@mixin c-footer--desktop() {
+
+	// Included to complete the breakpoint mixin pattern
+
+}

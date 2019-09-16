@@ -1,0 +1,30 @@
+
+@mixin columns--tablet() {
+
+	#content {
+		background-color: $color-frame;
+
+		&:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+
+		& > * {
+			float: left;
+		}
+
+		main {
+			width: 75%;
+			margin-left: 25%;
+		}
+
+		#navigation {
+			width: 25%;
+			margin-left: -100%;
+		}
+	}
+}
+
+@mixin columns--desktop() {
+}

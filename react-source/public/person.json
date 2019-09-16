@@ -1,0 +1,17 @@
+{
+	"name": "Michael Landis",
+	"titles": [
+		"Web Developer",
+		"Technical Translator"
+	],
+	"addresses": [
+		{
+			"type": "email",
+			"address": "michael4css@gmail.com"
+		},
+		{
+			"type": "phone",
+			"address": "213-215-0628"
+		}
+	]
+}

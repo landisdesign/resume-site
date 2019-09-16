@@ -1,0 +1,26 @@
+@import "common";
+
+@import "l-columns";
+@import "l-main";
+@import "c-footer";
+@import "c-header";
+@import "c-main-content";
+@import "c-navigation";
+
+@media (min-width: $tablet-width) {
+	@include l-columns--tablet();
+	@include l-main--tablet();
+	@include c-footer--tablet();
+	@include c-header--tablet();
+	@include c-main-content--tablet();
+	@include c-navigation--tablet();
+}
+
+@media (min-width: $desktop-width) {
+	@include l-columns--desktop();
+	@include l-main--desktop();
+	@include c-footer--desktop();
+	@include c-header--desktop();
+	@include c-main-content--desktop();
+	@include c-navigation--desktop();
+}

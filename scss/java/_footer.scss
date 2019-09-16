@@ -1,0 +1,40 @@
+footer p {
+	margin: 1em 0;
+	text-align: center;
+	font: normal 1rem $font-stack-sans-serif;
+}
+
+
+@mixin footer--tablet() {
+
+	footer {
+
+		&:after {
+			content: '';
+			display: block;
+			margin-bottom: 2rem;
+			clear: both;
+		}
+
+		& > * {
+			float: left;
+		}
+
+		div {
+			width: 25%;
+			height: 30px;
+			border-radius: 0 0 30px;
+			background-color: $color-frame;
+		}
+
+		p {
+			width: 75%;
+		}
+	}
+}
+
+@mixin footer--desktop() {
+
+	// Included to complete the breakpoint mixin pattern
+
+}

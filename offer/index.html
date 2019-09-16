@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<!--
+	BEM Example
+	
+	An article I read mentioned the Block Element Modifier method of program design, and
+	it seemed interesting, so I read about BEM on September 14. It made a lot of sense to
+	me, especially when considering CMS applications, so I thought I'd write this page
+	using that methodology. I began work at about 10:30am on September 15, using my Resume
+	page, refactoring the CSS and HTML to be BEM-friendly, completing the work in about 7
+	hours and finishing at 5:30pm.
+	
+	This helped me grow my SCSS skills, which has been great. I just started learning
+	SCSS on September 9, so I'm still learning. I expect to be using a lot of @extend and
+	& in the future.
+	
+	I have not run the final CSS through an optimizer, so the output will likely be
+	repetitive. That's one challenge I see with BEM. In a job where the developers have
+	access to SASS/SCSS and a CSS optimizer, this is an ideal OOCSS methodology. Without
+	those, the page weight and sheer typing time could get pretty cumbersome. More
+	conservative firms and firms with methodical technology controls may not be ready to
+	bring Gulp or other front-end development server-side tools into the mix, and we have
+	to adjust for that.
+-->
+	<head>
+		<title>Michael Landis, Web Developer and Technical Translator</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Given the size of the IE (not Edge) market I am forgoing the ICO version. -->
+		<link rel="icon" href="../favicon.png">
+		<link rel="stylesheet" href="//use.typekit.net/gsn5mzx.css" integrity="sha384-3KoIwGCi3wEjKL/6jfwJ91KrSyMG4TBBjHmrHRcrLVHNdxXHsIRGwsVuaQM13+It" crossorigin="anonymous">
+		<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<!--
+			The stylesheet for this page is compiled via SASS from source starting at
+			/development/scss/offer/offer.scss. Each page has some differences that reflect
+			differences in layout frameworks.
+		-->
+		<link rel="stylesheet" href="offer.css">
+	</head>
+	<body>
+		<header class="c-header">
+			<div class="c-header__user">
+				<h1 class="c-header__name">Michael Landis</h1>
+				<p class="c-header__title">Web Developer
+				<p class="c-header__title">Technical Translator
+			</div>
+			<div class="c-header__contact">
+				<p class="c-header__navigation"><a href="#navigation" class="c-header__navigation-link fas fa-bars collapsed" data-toggle-destination-id="navigation" data-toggle-bounds-id="nav-bounds"></a></p>
+				<p class="c-header__address"><a class="c-header__address-link" href="mailto:michael4css@gmail.com"><span class="c-header__address-icon">✉️</span><span class="c-header__address-text">michael4css@gmail.com</span></a>
+				<p class="c-header__address"><a class="c-header__address-link" href="tel:1-213-215-0628"><span class="c-header__address-icon">📞️</span><span class="c-header__address-text">213-215-0628</span></a>
+			</div>
+		</header>
+		<div id="nav-bounds" class="l-columns">
+			<div class="l-columns__column--25-75-2">
+				<main class="c-main-content">
+					<!-- I am styling the content as if the title is coming from a
+						 programmatic source, and therefore I can apply my styles as I wish.
+						 For the rest of the content, I am assuming this would come from a CMS
+						 editor, which would be raw unstyled tags. This breaks BEM, but also
+						 seems the most likely scenario for CMS. -->
+					<h1 class="c-main-content__title">What I offer</h1>
+					<p>The other areas of this site illustrate and describe my technical abilities, but don&rsquo;t give a sense of what I bring to a team beyond the technical.
+
+					<h2>Rapid learning skills</h2>
+					<p>I&rsquo;ve been creating web pages since 1997. I fell into that when my staffing partner at Aquent said, &ldquo;I have a job that requires web skills as well as your QuarkXpress knowledge. Do you think you can do both?&rdquo; I responded, &ldquo;I can learn!&rdquo; and spent a week learning about HTML before going onto the job. I haven&rsquo;t looked back since.
+					<p>When faced with a new technology, I absorb it and put it to use quickly. Typically I go from newbie to expert in that technology before project development is completed. When I worked on the <abbr title="Adobe Experience Manager">AEM</abbr> conversion for <a href="https://americanfunds.com" target="_blank">americanfunds.com</a>, I started with experience from a home-grown, <abbr title="REpresentational State Transfer">REST</abbr>-less, file-system-based <abbr title="content management system">CMS</abbr>. Within three months I was bringing valuable contributions to architectural discussions with our consultants.
+					<p>After leaving a technologically conservative firm and being away from technology for over five years, I&rsquo;m seeing techniques and technologies that excite me. In the process of building this site I learned how use Bootstrap 4&rsquo;s layout and utilities, SCSS, CSS flex layout, and BEM design, all within 10 days. It took me less than a week to learn about React and Google&rsquo;s search APIs and finish the application on this site, and 6 days to do the same with Angular.
+					<p>I recognize that, after my time away, I will need to catch up. I posit that it will take far less time for me to do so than might be anticipated.
+					<p>I look forward to learning with each new project I face.
+
+					<h2>Communication skills</h2>
+					<p>In one of my early performance reviews, my manager mentioned that I had the ability to explain technical issues to non-technical people &ndash; &ldquo;managers, team-members, clients, ice-cream vendors.&rdquo;
+					<p>As facetious as that was, it highlights my ability to translate ideas across fields. I understand and speak fluently the languages of visual design, writing, and business as well as technology. The ability to explain technical constraints to designers in a way that helps them understand and accept the constraints&rsquo; <em>purposes</em>, not just their <em>presence</em>, has been invaluable.
+					<p>I appreciate that each group has concerns and needs as valid as the others&rsquo;, and work to bring understanding to each group. I enjoy playing a <abbr title="business systems analyst">BSA</abbr> role, helping designers and business representatives clarify their requirements while working with fellow developers to find ways to fulfill challenging requests.
+					<p>In addition to facilitating the design process, I&rsquo;m also comfortable managing timeline and resource expectations. I believe there is no such thing as bad news, only valuable information. If I see something beyond my purview that raises concerns, whether in timelines or technical decisions, I will bring it to the appropriate level of attention, so that those whose purview it is can make their decisions with all the information, not just information I think they want to hear. Once a decision is made, I will implement it to the best of my ability.
+
+					<h2>Attention to detail</h2>
+					<p>In his seminal book <cite>Code Complete</cite>, Steve McConnell makes the claim that a developer&rsquo;s first and foremost job is to manage complexity. I take this to heart, aiming to make my code as readable and self-explanatory as possible. Beyond commenting, I break up longer methods and use human-readable names and liberal white space, to help make the code readable and easier for the developers after me to understand what I&rsquo;ve done.
+				</main>
+			</div>
+			<div class="l-columns__column--25-75-1">
+				<nav id="navigation" class="c-navigation collapsed">
+					<ul class="c-navigation__list">
+						<li class="c-navigation__list-item"><a href="../" class="c-navigation__link">About this site</a></li>
+						<li class="c-navigation__list-item"><strong class="c-navigation__link--current">What I offer</strong></li>
+						<li class="c-navigation__list-item"><a href="../java" class="c-navigation__link">Java experience and philosophy</a></li>
+						<li class="c-navigation__list-item"><a href="../resume" class="c-navigation__link">Resume</a></li>
+						<li class="c-navigation__list-item"><a href="../react" class="c-navigation__link">React example</a></li>
+						<li class="c-navigation__list-item"><a href="../angular" class="c-navigation__link">Angular example</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<footer class="c-footer">
+			<div class="c-footer__padding"></div>
+			<p class="c-footer__copyright">Copyright &copy;<span data-point="current-year"></span> Michael Landis
+		</footer>
+		<script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src="../script/utilities.js"></script>
+	</body>
+</html>

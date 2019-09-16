@@ -1,0 +1,61 @@
+.container--initial .button, .container .button {
+  width: 6rem;
+  height: 1.5rem;
+  border: 1px solid;
+  margin-left: 1rem;
+  color: #FFF;
+  font: normal 1.25rem/1 mr-eaves-modern, sans-serif;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.container--initial .button[disabled], .container .button[disabled] {
+  border-color: #999;
+  background-color: #CCC;
+  color: #333;
+}
+
+.container {
+  min-width: 100%;
+  padding: 1rem;
+  border: 1px solid #ABC;
+  margin: 0 0 1rem;
+  transition: all 0.5s;
+}
+.container .button {
+  border-color: #036;
+  background-color: #369;
+  transition: border-color, background-color 0.5s;
+}
+.container.transitted .button {
+  transition: none;
+}
+.container--initial {
+  min-width: 60%;
+  padding: 0;
+  border: 1px solid #EEE;
+  margin: 2rem 0;
+  transition: all 0.5s;
+}
+.container--initial .button {
+  border-color: #603;
+  background-color: #967;
+}
+.anchor {
+  display: flex;
+  justify-content: center;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font: normal 1.25rem/1 mr-eaves-modern, sans-serif;
+}
+
+.input {
+  width: calc(100% - 7rem - 4px);
+  height: 1.5rem;
+  font-size: 1rem;
+}
+
+/*# sourceMappingURL=query.component.css.map */

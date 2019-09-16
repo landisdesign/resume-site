@@ -1,0 +1,11 @@
+<div class="google">
+	<h1 class="title">Search via Google APIs Using Angular</h1>
+	<p class="description">This page is built using Angular to retrieve the first 10 search and image results from Google. The source files are accessible <a href="../angular-source" class="link">here</a>.</p>
+	<res-query (search)="updateSearch($event)"></res-query>
+
+	<div *ngIf="searchTerm" class="results">
+		<h2 class="results-title">Results for “{{ searchTerm }}”</h2>
+		<div class="column"><res-results [results]="textSearchResults" type="text"></res-results></div>
+		<div class="column"><res-results [results]="imageSearchResults" type="image"></res-results></div>
+	</div>
+</div>

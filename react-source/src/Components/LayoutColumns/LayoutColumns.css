@@ -1,0 +1,16 @@
+@media (min-width: 36em) {
+  .l-columns {
+    display: flex;
+    background-color: #FFF;
+  }
+  .l-columns__column--25-75-1 {
+    order: 1;
+    width: 25%;
+  }
+  .l-columns__column--25-75-2 {
+    order: 2;
+    width: 75%;
+  }
+}
+
+/*# sourceMappingURL=LayoutColumns.css.map */

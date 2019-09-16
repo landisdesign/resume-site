@@ -1,0 +1,26 @@
+@import "includes/variables";
+$image-root: #{"./"};
+$framework: "bootstrap";
+// Because the header tag includes Bootstrap classes, we need to add a class to the CSS to
+// keep the proper cascade. The homegrown layouts don't need it.
+$header-class: ".page";
+
+@import "includes/tags";
+@import "includes/header";
+@import "includes/content";
+@import "includes/navigation";
+@import "includes/footer";
+
+@media (min-width: 576px) {
+	@include header--tablet();
+	@include content--tablet();
+	@include navigation--tablet();
+	@include footer--tablet();
+}
+
+@media (min-width: 768px) {
+	@include header--desktop();
+	@include content--desktop();
+	@include navigation--desktop();
+	@include footer--desktop();
+}

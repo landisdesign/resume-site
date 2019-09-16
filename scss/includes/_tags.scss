@@ -1,0 +1,98 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	color: $color-text;
+	background-color: $color-background;
+	font: normal 100%/1.25 $font-stack-text;
+}
+
+body {
+	background-color: transparent;
+}
+
+blockquote, p, ul, ol {
+	margin-bottom: 1rem;
+}
+
+p, li {
+	font: normal 100%/1.5 $font-stack-text;
+}
+
+li {
+	margin: 0 0 .5rem 30px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	font-family: $font-stack-sans-serif;
+	line-height: 1;
+}
+
+h1 {
+	margin: 2rem 0 1rem;
+	font-size: 3rem;
+}
+
+h2 {
+	margin: 2rem 0 .5rem;
+	font-size: 1.5rem;
+}
+
+h3 {
+	margin: 1.5rem 0 .5rem;
+	font-size: 1.5rem;
+	font-weight: normal;
+}
+
+h4 {
+	margin: 1.25rem 0 .5rem;
+	font-size: 1.125rem;
+	font-weight: normal;
+}
+
+h5 {
+	margin: 1.5rem 0 0;
+	font-size: .9rem;
+	text-transform: uppercase;
+}
+
+h6 {
+	margin: 1.5rem 0 0;
+	font-size: .9rem;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+/*
+header > * {
+	outline: 1px solid #999;
+}
+
+header > * > * {
+	outline: 1px solid #F99;
+}
+
+header > * > * > * {
+	outline: 1px solid #9F9;
+}
+
+header > * > * > * > * {
+	outline: 1px solid #99F;
+}
+
+header > * > * > * > * > * {
+	outline: 1px solid #FCC;
+}
+
+header > * > * > * > * > * > * {
+	outline: 1px solid #CFC;
+}
+
+header > * > * > * > * > * > * *{
+	outline: 1px solid #CCF;
+}
+*/

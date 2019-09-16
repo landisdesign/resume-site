@@ -1,0 +1,25 @@
+@import './_common';
+
+// I'm using the same module technique as in offer.css, to separate out the
+// different major areas as well as to make media query insertion easier.
+
+@import './_header';
+@import './_columns';
+@import './_main';
+@import './_navigation';
+@import './_footer';
+
+@media (min-width: $tablet-width) {
+	@include header--tablet();
+	@include columns--tablet();
+	@include main--tablet();
+	@include navigation--tablet();
+	@include footer--tablet();
+}
+@media (min-width: $desktop-width) {
+	@include header--desktop();
+	@include columns--desktop();
+	@include main--desktop();
+	@include navigation--desktop();
+	@include footer--desktop();
+}

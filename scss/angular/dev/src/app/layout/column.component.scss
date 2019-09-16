@@ -1,0 +1,17 @@
+@import "../../_common";
+
+@media (min-width: $tablet-width) {
+	:host {
+		@each $order in 1 2 3 4 5 6 7 8 9 10 {
+			&[order="#{$order}"] {
+				order: $order;
+			}
+		}
+
+		@each $width in 10, 20, 25, 30, 33, 40, 50, 60, 66, 70, 75, 80, 90, 100 {
+			&[width="#{$width}"] {
+				width: #{$width + '%'};
+			}
+		}
+	}
+}

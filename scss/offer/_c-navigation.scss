@@ -1,0 +1,125 @@
+%navigation-link-dimensions {
+	display: block;
+	padding: 10px;
+	font: normal 1.25rem $font-stack-sans-serif;
+}
+
+.c-navigation {
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	margin: 0;
+	background-color: $color-navigation;
+
+	&.collapsed {
+	/* I'm using a non-namespaced class name to reduce the complexity of the JS across all
+	   the different examples for managing collapsing of the navigation. If I were to use
+	   BEM in this circumstance as well, I'd probably use a regular expression in the JS
+	   to identify the fully expanded "collapsed" modifier classes in the source and
+	   destination elements. */
+		visibility: hidden;
+	}
+
+	
+	&__list {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	&__list-item {
+		margin: 0;
+		padding: 0;
+		border-bottom: 1px solid $color-background;
+
+		&:first-child {
+			border-top: 1px solid $color-background;
+
+			&:before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 0;
+				z-index: 1;
+				width: 100%;
+				height: 5px;
+				background: edge-curve(bottom);
+			}
+		}
+
+		&:last-child:after {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: 0;
+			z-index: 1;
+			width: 100%;
+			height: 5px;
+			background: edge-curve(top);
+		}
+	}
+
+	> :last-child:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 100%;
+		z-index: 1;
+		width: 100%;
+		height: 10px;
+		background: edge-curve(bottom);
+	}
+
+	&__link {
+		@extend %navigation-link-dimensions;
+		@include linkProperties();
+
+		&--current {
+			@extend %navigation-link-dimensions;
+			background-color: $color-background;
+		}
+	}
+}
+
+@mixin c-navigation--tablet() {
+	
+	.c-navigation {
+		position: static;
+		margin-top: 2rem;
+		
+		&.collapsed {
+			visibility: visible;
+		}
+
+		&__list {
+			padding-left: 15px;
+		}
+		
+		&__list-item {
+			&:first-child:before {
+				display: none;
+			}
+			
+			&:last-child:after {
+				display: none;
+			}
+		}
+		
+		> :last-child:after {
+			display: none;
+		}
+	}
+}
+
+@mixin c-navigation--desktop() {
+	.c-navigation {
+		&__link, &__link--current {
+			padding: 15px;
+		}
+
+		&__list {
+			padding-left: 0;
+		}
+	}
+}
