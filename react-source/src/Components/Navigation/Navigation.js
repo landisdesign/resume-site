@@ -33,6 +33,11 @@ const navigationData = [
 		current: true
 	},
 	{
+		text: "React example 2",
+		href: "../react2",
+		current: false
+	},
+	{
 		text: "Angular Example",
 		href: "../angular",
 		current: false

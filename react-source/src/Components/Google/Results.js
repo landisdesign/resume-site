@@ -15,7 +15,7 @@ function resultsList(block, elementBase, type, json) {
 				json.items.map((item, index) => (
 					<div className={ UtilityMethods.bemClass(block, elementItemBase) } key={ index }>
 						<h4 className={ UtilityMethods.bemClass(block, elementItemBase + '-title') }>
-							<a className={ UtilityMethods.bemClass(block, elementItemBase + '-link') } href={ item.linkUrl } target="_blank" dangerouslySetInnerHTML={ {__html: item.linkText} } />
+							<a className={ UtilityMethods.bemClass(block, elementItemBase + '-link') } href={ item.linkUrl } target="_blank" rel="noopener noreferrer" dangerouslySetInnerHTML={ {__html: item.linkText} } />
 						</h4>
 						{
 							type === 'text' ? (

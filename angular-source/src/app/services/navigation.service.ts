@@ -24,6 +24,7 @@ class NavigationService {
 		new Navigation('Java experience and philosophy', '../java'),
 		new Navigation('Resume', '../resume'),
 		new Navigation('React example', '../react'),
+		new Navigation('React example 2', '../react2'),
 		new Navigation('Angular example', null)
 	];
 
