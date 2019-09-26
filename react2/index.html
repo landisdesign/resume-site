@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<!--
+	BEM Example
+	
+	An article I read mentioned the Block Element Modifier method of program design, and
+	it seemed interesting, so I read about BEM on September 14. It made a lot of sense to
+	me, especially when considering CMS applications, so I thought I'd write this page
+	using that methodology. I began work at about 10:30am on September 15, using my Resume
+	page, refactoring the CSS and HTML to be BEM-friendly, completing the work in about 7
+	hours and finishing at 5:30pm.
+	
+	This helped me grow my SCSS skills, which has been great. I just started learning
+	SCSS on September 9, so I'm still learning. I expect to be using a lot of @extend and
+	& in the future.
+	
+	I have not run the final CSS through an optimizer, so the output will likely be
+	repetitive. That's one challenge I see with BEM. In a job where the developers have
+	access to SASS/SCSS and a CSS optimizer, this is an ideal OOCSS methodology. Without
+	those, the page weight and sheer typing time could get pretty cumbersome. More
+	conservative firms and firms with methodical technology controls may not be ready to
+	bring Gulp or other front-end development server-side tools into the mix, and we have
+	to adjust for that.
+-->
+	<head>
+		<title>Michael Landis, Web Developer and Technical Translator</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Given the size of the IE (not Edge) market I am forgoing the ICO version. -->
+		<link rel="icon" href="../favicon.png">
+		<link rel="stylesheet" href="//use.typekit.net/gsn5mzx.css" integrity="sha384-3KoIwGCi3wEjKL/6jfwJ91KrSyMG4TBBjHmrHRcrLVHNdxXHsIRGwsVuaQM13+It" crossorigin="anonymous">
+		<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<!--
+			The stylesheet for this page is compiled via SASS from source starting at
+			/development/scss/offer/offer.scss. Each page has some differences that reflect
+			differences in layout frameworks.
+		-->
+		<link rel="stylesheet" href="offer.css">
+	</head>
+	<body>
+		<header class="c-header">
+			<div class="c-header__user">
+				<h1 class="c-header__name">Michael Landis</h1>
+				<p class="c-header__title">Web Developer
+				<p class="c-header__title">Technical Translator
+			</div>
+			<div class="c-header__contact">
+				<p class="c-header__navigation"><a href="#navigation" class="c-header__navigation-link fas fa-bars collapsed" data-toggle-destination-id="navigation" data-toggle-bounds-id="nav-bounds"></a></p>
+				<p class="c-header__address"><a class="c-header__address-link" href="mailto:michael4css@gmail.com"><span class="c-header__address-icon">✉️</span><span class="c-header__address-text">michael4css@gmail.com</span></a>
+				<p class="c-header__address"><a class="c-header__address-link" href="tel:1-213-215-0628"><span class="c-header__address-icon">📞️</span><span class="c-header__address-text">213-215-0628</span></a>
+			</div>
+		</header>
+		<div id="nav-bounds" class="l-columns">
+			<div class="l-columns__column--25-75-2">
+				<!-- If this page were being showcased, not the app it links to, I would rewrite
+				     the CSS to include the min-height. -->
+				<main class="c-main-content" style="min-height: 100%">
+					<!-- I am styling the content as if the title is coming from a
+						 programmatic source, and therefore I can apply my styles as I wish.
+						 For the rest of the content, I am assuming this would come from a CMS
+						 editor, which would be raw unstyled tags. This breaks BEM, but also
+						 seems the most likely scenario for CMS. -->
+					<h1 class="c-main-content__title">React example 2: MadLibs</h1>
+					<p>It had been a while since I made the first React app, so I decided to make a second, more interactive one: a simple Madlibs-style game. I made this one as functional (non-class-oriented) as possible, learning and applying Hooks where appropriate.
+
+					<p><u href="../madlibs" target="_blank">React Madlibs</u> (coming soon)
+					<p><a href="https://github.com/landisdesign/reactlibs" target="_blank">source code</a> (in progress)
+				</main>
+			</div>
+			<div class="l-columns__column--25-75-1">
+				<nav id="navigation" class="c-navigation collapsed">
+					<ul class="c-navigation__list">
+						<li class="c-navigation__list-item"><a href="../" class="c-navigation__link">About this site</a></li>
+						<li class="c-navigation__list-item"><a href="../offer" class="c-navigation__link">What I offer</a></li>
+						<li class="c-navigation__list-item"><a href="../java" class="c-navigation__link">Java experience and philosophy</a></li>
+						<li class="c-navigation__list-item"><a href="../resume" class="c-navigation__link">Resume</a></li>
+						<li class="c-navigation__list-item"><a href="../react" class="c-navigation__link">React example</a></li>
+						<li class="c-navigation__list-item"><strong class="c-navigation__link--current">React example 2</strong></li>
+						<li class="c-navigation__list-item"><a href="../angular" class="c-navigation__link">Angular example</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<footer class="c-footer">
+			<div class="c-footer__padding"></div>
+			<p class="c-footer__copyright">Copyright &copy;<span data-point="current-year"></span> Michael Landis
+		</footer>
+		<script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src="../script/utilities.js"></script>
+	</body>
+</html>
