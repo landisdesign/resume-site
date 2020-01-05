@@ -1,0 +1,322 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #EEE;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.c-footer__copyright {
+  margin: 0 0 1rem;
+  text-align: center;
+  font: normal 1rem mr-eaves-modern, sans-serif;
+}
+
+.c-header__address, .c-header__title {
+  font: normal 0.925rem/1.25 mr-eaves-modern, sans-serif;
+}
+
+.c-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  min-height: 80px;
+  padding: 15px 15px 15px 65px;
+  background: #FFF url(../images/logo.png) 15px/48px no-repeat;
+}
+.c-header:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 15px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0) 100%);
+}
+.c-header__user {
+  flex: 1 0 auto;
+}
+.c-header__name {
+  padding-bottom: 0.25rem;
+  margin: 0 0 0 1rem;
+  font: bold 1.5rem/0.9 mr-eaves-modern, sans-serif;
+}
+.c-header__title {
+  display: inline-block;
+  padding: 0.25rem 0 0.2rem;
+  margin: 0 0 0 1rem;
+}
+.c-header__contact {
+  text-align: right;
+}
+.c-header__navigation {
+  margin: 0 0 0.25rem;
+  font-size: 100%;
+  line-height: 1;
+}
+.c-header__address {
+  display: inline-block;
+  padding: 0.25rem 0 0.2rem;
+  margin: 0 0.1rem 0 0.25rem;
+}
+.c-header__address-link, .c-header__address-link:link, .c-header__address-link:visited, .c-header__navigation-link, .c-header__navigation-link:link, .c-header__navigation-link:visited {
+  color: #007BFF;
+  text-decoration: none;
+}
+.c-header__address-link:hover, .c-header__navigation-link:hover {
+  color: #0056B3;
+  text-decoration: underline;
+}
+.c-header__address-text {
+  display: none;
+}
+
+.c-main-content {
+  padding: 0.1px 1rem;
+  /* .c-main-content__title is the only programmatic element in this component.
+      Everything else is expected to come from an online HTML editor. Because of this,
+      we will be styling the other tags directly. H1 should never be used in content,
+      only as the title for the content. */
+}
+.c-main-content__title, .c-main-content h2, .c-main-content h3, .c-main-content h4, .c-main-content h5, .c-main-content h6 {
+  font-weight: bold;
+  font-family: mr-eaves-modern, sans-serif;
+  line-height: 1;
+}
+.c-main-content__title {
+  margin: 2rem 0 1rem;
+  font-size: 3rem;
+}
+.c-main-content h2 {
+  margin: 2rem 0 0.5rem;
+  font-size: 1.5rem;
+}
+.c-main-content h3 {
+  margin: 1.5rem 0 0.5rem;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+.c-main-content h4 {
+  margin: 1.25rem 0 0.5rem;
+  font-size: 1.125rem;
+  font-weight: normal;
+}
+.c-main-content h5 {
+  margin: 1.5rem 0 0;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+.c-main-content h6 {
+  margin: 1.5rem 0 0;
+  font-size: 0.9rem;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.c-main-content p {
+  font: normal 1rem/1.5 mandrel-normal, serif;
+}
+.c-main-content a, .c-main-content a:link, .c-main-content a:visited {
+  color: #007BFF;
+  text-decoration: none;
+}
+.c-main-content a:hover {
+  color: #0056B3;
+  text-decoration: underline;
+}
+
+.c-navigation__link--current, .c-navigation__link {
+  display: block;
+  padding: 10px;
+  font: normal 1.25rem mr-eaves-modern, sans-serif;
+}
+
+.c-navigation {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  margin: 0;
+  background-color: #FFF;
+}
+.c-navigation.collapsed {
+  /* I'm using a non-namespaced class name to reduce the complexity of the JS across all
+     the different examples for managing collapsing of the navigation. If I were to use
+     BEM in this circumstance as well, I'd probably use a regular expression in the JS
+     to identify the fully expanded "collapsed" modifier classes in the source and
+     destination elements. */
+  visibility: hidden;
+}
+.c-navigation__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.c-navigation__list-item {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #EEE;
+}
+.c-navigation__list-item:first-child {
+  border-top: 1px solid #EEE;
+}
+.c-navigation__list-item:first-child:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0) 100%);
+}
+.c-navigation__list-item:last-child:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0) 100%);
+}
+.c-navigation > :last-child:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0) 100%);
+}
+.c-navigation__link, .c-navigation__link:link, .c-navigation__link:visited {
+  color: #007BFF;
+  text-decoration: none;
+}
+.c-navigation__link:hover {
+  color: #0056B3;
+  text-decoration: underline;
+}
+.c-navigation__link--current {
+  background-color: #EEE;
+}
+
+@media (min-width: 36em) {
+  .l-columns {
+    display: flex;
+    background-color: #FFF;
+  }
+  .l-columns__column--25-75-1 {
+    order: 1;
+    width: 25%;
+  }
+  .l-columns__column--25-75-2 {
+    order: 2;
+    width: 75%;
+  }
+
+  .c-footer {
+    display: flex;
+  }
+  .c-footer__padding {
+    width: 25%;
+    height: 30px;
+    border-radius: 0 0 30px;
+    margin-bottom: 2rem;
+    background-color: #FFF;
+  }
+  .c-footer__copyright {
+    width: 75%;
+  }
+
+  .c-header {
+    position: static;
+    padding-left: 63px;
+  }
+  .c-header:after {
+    display: none;
+  }
+  .c-header__name {
+    padding-bottom: 0;
+    font-size: 2rem;
+    line-height: 1;
+  }
+  .c-header__address, .c-header__title {
+    padding-bottom: 0;
+    font-size: 1rem;
+  }
+  .c-header__navigation {
+    display: none;
+  }
+
+  .c-main-content {
+    border-radius: 30px 0 0;
+    background-color: #EEE;
+  }
+
+  .c-navigation {
+    position: static;
+    margin-top: 2rem;
+  }
+  .c-navigation.collapsed {
+    visibility: visible;
+  }
+  .c-navigation__list {
+    padding-left: 15px;
+  }
+  .c-navigation__list-item:first-child:before {
+    display: none;
+  }
+  .c-navigation__list-item:last-child:after {
+    display: none;
+  }
+  .c-navigation > :last-child:after {
+    display: none;
+  }
+}
+@media (min-width: 48em) {
+  .c-header {
+    min-height: 130px;
+    padding-left: 115px;
+    background-size: 96px;
+    background-position: 15px 50%;
+  }
+  .c-header__user, .c-header__contact {
+    margin-bottom: 0.1rem;
+  }
+  .c-header__name {
+    font-size: 3em;
+  }
+  .c-header__address, .c-header__title {
+    display: block;
+    padding: 0;
+    font-size: 1.25rem;
+  }
+  .c-header__address-text {
+    display: inline;
+  }
+  .c-header__address-icon {
+    display: none;
+  }
+
+  .c-navigation__link, .c-navigation__link--current {
+    padding: 15px;
+  }
+  .c-navigation__list {
+    padding-left: 0;
+  }
+}
+
+/*# sourceMappingURL=offer.css.map */

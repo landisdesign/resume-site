@@ -1,26 +1,8 @@
 <!DOCTYPE html>
 <html>
 <!--
-	BEM Example
-	
-	An article I read mentioned the Block Element Modifier method of program design, and
-	it seemed interesting, so I read about BEM on September 14. It made a lot of sense to
-	me, especially when considering CMS applications, so I thought I'd write this page
-	using that methodology. I began work at about 10:30am on September 15, using my Resume
-	page, refactoring the CSS and HTML to be BEM-friendly, completing the work in about 7
-	hours and finishing at 5:30pm.
-	
-	This helped me grow my SCSS skills, which has been great. I just started learning
-	SCSS on September 9, so I'm still learning. I expect to be using a lot of @extend and
-	& in the future.
-	
-	I have not run the final CSS through an optimizer, so the output will likely be
-	repetitive. That's one challenge I see with BEM. In a job where the developers have
-	access to SASS/SCSS and a CSS optimizer, this is an ideal OOCSS methodology. Without
-	those, the page weight and sheer typing time could get pretty cumbersome. More
-	conservative firms and firms with methodical technology controls may not be ready to
-	bring Gulp or other front-end development server-side tools into the mix, and we have
-	to adjust for that.
+	This is a simple copy from react2. I'm focusing on illustrating my React
+	skills more than my HTML/CSS skills at this point.
 -->
 	<head>
 		<title>Michael Landis, Web Developer and Technical Translator</title>
@@ -61,11 +43,13 @@
 						 For the rest of the content, I am assuming this would come from a CMS
 						 editor, which would be raw unstyled tags. This breaks BEM, but also
 						 seems the most likely scenario for CMS. -->
-					<h1 class="c-main-content__title">React example 2: MadLibs</h1>
-					<p>It had been a while since I made the first React app, so I decided to make a second, more interactive one: a simple Madlibs-style game. I made this one as functional (non-class-oriented) as possible, learning and applying Hooks where appropriate.
+					<h1 class="c-main-content__title">React example 3: MadLibs using TypeScript and classes</h1>
+					<p>This is a port from my original React Madlibs code, where I was exploring how to make a more complex example using reducers and hooks. In this exercise, I&rsquo;m exploring how to use TypeScript and class-based React code.
+					
+					<p>In this example I have omitted the testing aspect, as I was focussing specifically on TypeScript. I am working on another version of this app using TDD methodologies.
 
-					<p><a href="../madlibs" target="_blank">React Madlibs</a>
-					<p><a href="https://github.com/landisdesign/reactlibs" target="_blank">source code</a>
+					<p><a href="../madlibs-ts" target="_blank">React Madlibs with TypeScript</a>
+					<p><a href="https://github.com/landisdesign/reactlibs-ts" target="_blank">source code</a>
 				</main>
 			</div>
 			<div class="l-columns__column--25-75-1">
@@ -76,8 +60,8 @@
 						<li class="c-navigation__list-item"><a href="../java" class="c-navigation__link">Java experience and philosophy</a></li>
 						<li class="c-navigation__list-item"><a href="../resume" class="c-navigation__link">Resume</a></li>
 						<li class="c-navigation__list-item"><a href="../react" class="c-navigation__link">React example</a></li>
-						<li class="c-navigation__list-item"><strong class="c-navigation__link--current">React example 2</strong></li>
-						<li class="c-navigation__list-item"><a href="../react-typescript" "class="c-navigation__link">React using TypeScript</a></li>
+						<li class="c-navigation__list-item"><a href="../react2" class="c-navigation__link">React example 2</a></li>
+						<li class="c-navigation__list-item"><strong class="c-navigation__link--current">React using TypeScript</strong></li>
 						<li class="c-navigation__list-item"><a href="../angular" class="c-navigation__link">Angular example</a></li>
 					</ul>
 				</nav>

@@ -25,6 +25,7 @@ class NavigationService {
 		new Navigation('Resume', '../resume'),
 		new Navigation('React example', '../react'),
 		new Navigation('React example 2', '../react2'),
+		new Navigation('React with TypeScript', '../react-typescript'),
 		new Navigation('Angular example', null)
 	];
 

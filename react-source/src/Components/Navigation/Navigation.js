@@ -38,6 +38,11 @@ const navigationData = [
 		current: false
 	},
 	{
+		text: "React with TypeScript",
+		href: "../react-typescript",
+		current: false
+	},
+	{
 		text: "Angular Example",
 		href: "../angular",
 		current: false
